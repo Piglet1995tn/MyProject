@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetStudenK10JS">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetStudenK10JSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStudenK10JSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStudentById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rollNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStudentByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStudentByIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckBlance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rollNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckBlanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckBlanceResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetriveImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rollnumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetriveImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetriveImageResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getscheduleExam">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rollNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getscheduleExamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getscheduleExamResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInfoToday">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rollNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInfoTodayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getInfoTodayResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCurriculum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rollNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCurriculumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCurriculumResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getWeeklyReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rollNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sDateTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eDateTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getWeeklyReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getWeeklyReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAttendanceMark">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rollNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="semsester" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAttendanceMarkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAttendanceMarkResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getGPA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rollNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="semsester" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getGPAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getGPAResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTimeTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rollNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTimeTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTimeTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFailCourse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rollNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFailCourseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFailCourseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPassCourse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rollNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPassCourseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPassCourseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetStudenK10JSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStudenK10JS" />
+  </wsdl:message>
+  <wsdl:message name="GetStudenK10JSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStudenK10JSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStudentByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStudentById" />
+  </wsdl:message>
+  <wsdl:message name="GetStudentByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStudentByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckBlanceSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckBlance" />
+  </wsdl:message>
+  <wsdl:message name="CheckBlanceSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckBlanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetriveImageSoapIn">
+    <wsdl:part name="parameters" element="tns:RetriveImage" />
+  </wsdl:message>
+  <wsdl:message name="RetriveImageSoapOut">
+    <wsdl:part name="parameters" element="tns:RetriveImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="getscheduleExamSoapIn">
+    <wsdl:part name="parameters" element="tns:getscheduleExam" />
+  </wsdl:message>
+  <wsdl:message name="getscheduleExamSoapOut">
+    <wsdl:part name="parameters" element="tns:getscheduleExamResponse" />
+  </wsdl:message>
+  <wsdl:message name="getInfoTodaySoapIn">
+    <wsdl:part name="parameters" element="tns:getInfoToday" />
+  </wsdl:message>
+  <wsdl:message name="getInfoTodaySoapOut">
+    <wsdl:part name="parameters" element="tns:getInfoTodayResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCurriculumSoapIn">
+    <wsdl:part name="parameters" element="tns:getCurriculum" />
+  </wsdl:message>
+  <wsdl:message name="getCurriculumSoapOut">
+    <wsdl:part name="parameters" element="tns:getCurriculumResponse" />
+  </wsdl:message>
+  <wsdl:message name="getWeeklyReportSoapIn">
+    <wsdl:part name="parameters" element="tns:getWeeklyReport" />
+  </wsdl:message>
+  <wsdl:message name="getWeeklyReportSoapOut">
+    <wsdl:part name="parameters" element="tns:getWeeklyReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAttendanceMarkSoapIn">
+    <wsdl:part name="parameters" element="tns:getAttendanceMark" />
+  </wsdl:message>
+  <wsdl:message name="getAttendanceMarkSoapOut">
+    <wsdl:part name="parameters" element="tns:getAttendanceMarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="getGPASoapIn">
+    <wsdl:part name="parameters" element="tns:getGPA" />
+  </wsdl:message>
+  <wsdl:message name="getGPASoapOut">
+    <wsdl:part name="parameters" element="tns:getGPAResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTimeTableSoapIn">
+    <wsdl:part name="parameters" element="tns:getTimeTable" />
+  </wsdl:message>
+  <wsdl:message name="getTimeTableSoapOut">
+    <wsdl:part name="parameters" element="tns:getTimeTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFailCourseSoapIn">
+    <wsdl:part name="parameters" element="tns:getFailCourse" />
+  </wsdl:message>
+  <wsdl:message name="getFailCourseSoapOut">
+    <wsdl:part name="parameters" element="tns:getFailCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPassCourseSoapIn">
+    <wsdl:part name="parameters" element="tns:getPassCourse" />
+  </wsdl:message>
+  <wsdl:message name="getPassCourseSoapOut">
+    <wsdl:part name="parameters" element="tns:getPassCourseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SAPISoap">
+    <wsdl:operation name="GetStudenK10JS">
+      <wsdl:input message="tns:GetStudenK10JSSoapIn" />
+      <wsdl:output message="tns:GetStudenK10JSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentById">
+      <wsdl:input message="tns:GetStudentByIdSoapIn" />
+      <wsdl:output message="tns:GetStudentByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckBlance">
+      <wsdl:input message="tns:CheckBlanceSoapIn" />
+      <wsdl:output message="tns:CheckBlanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetriveImage">
+      <wsdl:input message="tns:RetriveImageSoapIn" />
+      <wsdl:output message="tns:RetriveImageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getscheduleExam">
+      <wsdl:input message="tns:getscheduleExamSoapIn" />
+      <wsdl:output message="tns:getscheduleExamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInfoToday">
+      <wsdl:input message="tns:getInfoTodaySoapIn" />
+      <wsdl:output message="tns:getInfoTodaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCurriculum">
+      <wsdl:input message="tns:getCurriculumSoapIn" />
+      <wsdl:output message="tns:getCurriculumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getWeeklyReport">
+      <wsdl:input message="tns:getWeeklyReportSoapIn" />
+      <wsdl:output message="tns:getWeeklyReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAttendanceMark">
+      <wsdl:input message="tns:getAttendanceMarkSoapIn" />
+      <wsdl:output message="tns:getAttendanceMarkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getGPA">
+      <wsdl:input message="tns:getGPASoapIn" />
+      <wsdl:output message="tns:getGPASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTimeTable">
+      <wsdl:input message="tns:getTimeTableSoapIn" />
+      <wsdl:output message="tns:getTimeTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFailCourse">
+      <wsdl:input message="tns:getFailCourseSoapIn" />
+      <wsdl:output message="tns:getFailCourseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPassCourse">
+      <wsdl:input message="tns:getPassCourseSoapIn" />
+      <wsdl:output message="tns:getPassCourseSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SAPISoap" type="tns:SAPISoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStudenK10JS">
+      <soap:operation soapAction="http://tempuri.org/GetStudenK10JS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentById">
+      <soap:operation soapAction="http://tempuri.org/GetStudentById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBlance">
+      <soap:operation soapAction="http://tempuri.org/CheckBlance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetriveImage">
+      <soap:operation soapAction="http://tempuri.org/RetriveImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getscheduleExam">
+      <soap:operation soapAction="http://tempuri.org/getscheduleExam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInfoToday">
+      <soap:operation soapAction="http://tempuri.org/getInfoToday" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurriculum">
+      <soap:operation soapAction="http://tempuri.org/getCurriculum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWeeklyReport">
+      <soap:operation soapAction="http://tempuri.org/getWeeklyReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAttendanceMark">
+      <soap:operation soapAction="http://tempuri.org/getAttendanceMark" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGPA">
+      <soap:operation soapAction="http://tempuri.org/getGPA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTimeTable">
+      <soap:operation soapAction="http://tempuri.org/getTimeTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFailCourse">
+      <soap:operation soapAction="http://tempuri.org/getFailCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPassCourse">
+      <soap:operation soapAction="http://tempuri.org/getPassCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SAPISoap12" type="tns:SAPISoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStudenK10JS">
+      <soap12:operation soapAction="http://tempuri.org/GetStudenK10JS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudentById">
+      <soap12:operation soapAction="http://tempuri.org/GetStudentById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBlance">
+      <soap12:operation soapAction="http://tempuri.org/CheckBlance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetriveImage">
+      <soap12:operation soapAction="http://tempuri.org/RetriveImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getscheduleExam">
+      <soap12:operation soapAction="http://tempuri.org/getscheduleExam" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInfoToday">
+      <soap12:operation soapAction="http://tempuri.org/getInfoToday" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurriculum">
+      <soap12:operation soapAction="http://tempuri.org/getCurriculum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWeeklyReport">
+      <soap12:operation soapAction="http://tempuri.org/getWeeklyReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAttendanceMark">
+      <soap12:operation soapAction="http://tempuri.org/getAttendanceMark" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGPA">
+      <soap12:operation soapAction="http://tempuri.org/getGPA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTimeTable">
+      <soap12:operation soapAction="http://tempuri.org/getTimeTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFailCourse">
+      <soap12:operation soapAction="http://tempuri.org/getFailCourse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPassCourse">
+      <soap12:operation soapAction="http://tempuri.org/getPassCourse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SAPI">
+    <wsdl:port name="SAPISoap" binding="tns:SAPISoap">
+      <soap:address location="http://testfap.fpt.edu.vn/SAPI.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SAPISoap12" binding="tns:SAPISoap12">
+      <soap12:address location="http://testfap.fpt.edu.vn/SAPI.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

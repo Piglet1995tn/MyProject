@@ -1,0 +1,17 @@
+C:\Users\Piglet\Documents\Visual Studio 2017\Projects\FreedomeF2008(1)\FreedomeF\Freedom.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Piglet\Documents\Visual Studio 2017\Projects\FreedomeF2008(1)\FreedomeF\Freedom.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Piglet\Documents\Visual Studio 2017\Projects\FreedomeF2008(1)\FreedomeF\Freedom.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Piglet\Documents\Visual Studio 2017\Projects\FreedomeF2008(1)\FreedomeF\Freedom.Test\bin\Debug\Freedom.Test.dll
+C:\Users\Piglet\Documents\Visual Studio 2017\Projects\FreedomeF2008(1)\FreedomeF\Freedom.Test\bin\Debug\Freedom.Test.pdb
+C:\Users\Piglet\Documents\Visual Studio 2017\Projects\FreedomeF2008(1)\FreedomeF\Freedom.Test\bin\Debug\FreedomeF.dll
+C:\Users\Piglet\Documents\Visual Studio 2017\Projects\FreedomeF2008(1)\FreedomeF\Freedom.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Piglet\Documents\Visual Studio 2017\Projects\FreedomeF2008(1)\FreedomeF\Freedom.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Piglet\Documents\Visual Studio 2017\Projects\FreedomeF2008(1)\FreedomeF\Freedom.Test\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Piglet\Documents\Visual Studio 2017\Projects\FreedomeF2008(1)\FreedomeF\Freedom.Test\bin\Debug\FreedomeF.pdb
+C:\Users\Piglet\Documents\Visual Studio 2017\Projects\FreedomeF2008(1)\FreedomeF\Freedom.Test\bin\Debug\FreedomeF.dll.config
+C:\Users\Piglet\Documents\Visual Studio 2017\Projects\FreedomeF2008(1)\FreedomeF\Freedom.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Piglet\Documents\Visual Studio 2017\Projects\FreedomeF2008(1)\FreedomeF\Freedom.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Piglet\Documents\Visual Studio 2017\Projects\FreedomeF2008(1)\FreedomeF\Freedom.Test\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Piglet\Documents\Visual Studio 2017\Projects\FreedomeF2008(1)\FreedomeF\Freedom.Test\obj\Debug\Freedom.Test.csprojResolveAssemblyReference.cache
+C:\Users\Piglet\Documents\Visual Studio 2017\Projects\FreedomeF2008(1)\FreedomeF\Freedom.Test\obj\Debug\Freedom.Test.dll
+C:\Users\Piglet\Documents\Visual Studio 2017\Projects\FreedomeF2008(1)\FreedomeF\Freedom.Test\obj\Debug\Freedom.Test.pdb
